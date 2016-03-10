@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cropper wrapper for BnS profile pictures">
+  <meta name="author" content="Clement Ng">
+  <title>Erism - Cropper wrapper for BnS profile pictures</title>
+  
+  <link  href="cropper/dist/cropper.min.css" rel="stylesheet">
+  
+  
+  
+</head>
+
+<body>
+  <header>Erism - Cropper wrapper for BnS profile pictures</header>
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script><!-- jQuery is required -->
+  <script src="cropper/dist/cropper.min.js"></script>
+  <script>
+    $('#image').cropper({
+      aspectRatio: 16 / 9,
+      crop: function(e) {
+        // Output the result data for cropping image.
+        console.log(e.x);
+        console.log(e.y);
+        console.log(e.width);
+        console.log(e.height);
+        console.log(e.rotate);
+        console.log(e.scaleX);
+        console.log(e.scaleY);
+      }
+    });
+  </script>
+  <style>
+    img {max-width:100%}
+  </style>
+  <div>
+    
+    <img id="image" src="sensei.jpg">
+    
+  </div>
+  <div id="result">
+  
+  </div>
+  
+  
+</body>
+
+</html>
