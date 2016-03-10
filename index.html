@@ -16,9 +16,9 @@
       'use strict';
       
       var $image = $('#image');
-      
+      var $result = $('#result')
       $image.cropper({
-        aspectRatio: 16 / 9,
+        aspectRatio: 125 / 197,
         crop: function(e) {
           // Output the result data for cropping image.
           console.log(e.x);
@@ -40,15 +40,16 @@
   
   <style>
     img {max-width:100%}
+    workspace {width:1024px;height:768}
   </style>
+  
+  
   <div id="workspace">
     <img id="image" src="sensei_orig.jpg">
   </div>
   
   <div id="result">
-    <button type="button" data-method="getCroppedCanvas">
-      <span data-original-title="$().cropper('getCroppedCanvas')" title="">ERIS IS THE BEST!</span>
-    </button>
+    <img 
   </div>
   
   
