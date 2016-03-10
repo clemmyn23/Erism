@@ -30,41 +30,33 @@
           console.log(e.scaleY);
         }
       });
-      
-      $('#canvas') = $image.cropper('getCroppedCanvas');
-
     });
   </script>
-  
 </head>
 
 <body>
   <style>
     @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
     header {font-size:48px; font-family: 'Source Sans Pro', sans-serif;}</style>
-  <header>Erism - Cropper wrapper for BnS profile pictures</header>
+  <header>Erism [ALPHA]- BnS profile pictures cropper</header>
   
   <style>
-    canvas {margin:40px}
     img {max-width:100%}
     .workspace {margin:40px; max-width:1024px}
     .img-preview {margin:40px; background-color:#eeeeee; text-align:center; overflow:hidden;
                   width:250px; height:394px;}
+    .result {margin:40px}
   </style>
-  
   
   <div class="workspace">
     <img id="image" src="sensei_orig.jpg">
   </div>
   
-  <div class="img-preview">
-  </div>
+  <div class="img-preview"></div>
   
   <div class="result">
-    
     <canvas id="canvas" width="250" height="394" style="background:#eeeeee"></canvas>
   </div>
   
 </body>
-
 </html>
