@@ -16,10 +16,9 @@
       'use strict';
       
       var $image = $('#image');
-      var $result = $('#result')
       $image.cropper({
         aspectRatio: 125 / 197,
-        preview: '.result',
+        preview: '.img-preview',
         crop: function(e) {
           // Output the result data for cropping image.
           console.log(e.x);
@@ -40,8 +39,10 @@
   <header>Erism - Cropper wrapper for BnS profile pictures</header>
   
   <style>
-    img {max-width: 100%}
-    .workspace {max-width: 1000px;}
+    img {max-width:100%}
+    .workspace {max-width:1000px}
+    .img-preview {background-color:#eeeeee; text-align:center; width:100%;
+                  max-width:125px; max-height:197px}
   </style>
   
   
@@ -49,7 +50,7 @@
     <img id="image" src="sensei_orig.jpg">
   </div>
   
-  <div id="result">
+  <div id="img-preview">
   </div>
   
   
