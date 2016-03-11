@@ -11,51 +11,55 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script><!-- jQuery is required -->
   <link  href="cropper/dist/cropper.min.css" rel="stylesheet">
   <script src="cropper/dist/cropper.min.js"></script>
-  <script>
-    $(function() {
-      'use strict';
-      
-      var $image = $('#image');
-      $image.cropper({
-        aspectRatio: 125 / 197,
-        preview: '.img-preview',
-        crop: function(e) {
-          // Output the result data for cropping image.
-          console.log(e.x);
-          console.log(e.y);
-          console.log(e.width);
-          console.log(e.height);
-          console.log(e.rotate);
-          console.log(e.scaleX);
-          console.log(e.scaleY);
-        }
-      });
-    });
-  </script>
+  <script src="js/main.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
 </head>
 
 <body>
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
   <style>
     @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-    header {font-size:48px; font-family: 'Source Sans Pro', sans-serif;}</style>
-  <header>Erism [ALPHA]- BnS profile pictures cropper</header>
+    #header {margin-top:40px; margin-bottom:40px}
+    header {font-size:48px; font-family: 'Source Sans Pro', sans-serif;}
+  </style>
+  <div id="header">
+    <header>Erism [ALPHA]- BnS profile pictures cropper</header>
+  </div>
   
   <style>
     img {max-width:100%}
-    .workspace {margin:40px; max-width:1024px}
-    .img-preview {margin:40px; background-color:#eeeeee; text-align:center; overflow:hidden;
-                  width:250px; height:394px;}
-    .result {margin:40px}
+    .workspace {margin-left:10px; margin-right:10px; margin-top:auto;
+                max-width:800px; display:inline-block}
+    .img-preview {margin-left:10px; margin-right:10px; margin-top:auto;
+                  background-color:#eeeeee; text-align:center; overflow:hidden;
+                  width:250px; height:394px; display:inline-block}
+    .result {margin:20px}
+    #benchtop {text-align:center}
   </style>
   
-  <div class="workspace">
-    <img id="image" src="sensei_orig.jpg">
+  <div id="benchtop">
+    <div class="workspace">
+      <img id="image" src="sensei_orig.jpg">
+    </div>
+    
+    <div class="img-preview"></div>
   </div>
   
-  <div class="img-preview"></div>
+  <div id="toolbox">
+    <button class="btn" type="button" data-method="reset" title="$().cropper('reset')">RESET</button>
+  </div>
   
   <div class="result">
     <canvas id="canvas" width="250" height="394" style="background:#eeeeee"></canvas>
+     <a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.png">Download</a>
   </div>
   
 </body>
