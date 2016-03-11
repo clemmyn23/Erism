@@ -36,6 +36,19 @@ $(function() {
     },
     'crop.cropper': function (e) {
       console.log(e.type, e.x, e.y, e.width, e.height, e.rotate, e.scaleX, e.scaleY);
+    },
+    
+    'cropstart.cropper': function (e) {
+      console.log(e.type, e.action);
+    },
+    'cropmove.cropper': function (e) {
+      console.log(e.type, e.action);
+    },
+    'cropend.cropper': function (e) {
+      console.log(e.type, e.action);
+    },
+    'zoom.cropper': function (e) {
+      console.log(e.type, e.ratio);
     }
   }).cropper(options);
     
@@ -145,39 +158,39 @@ $(function() {
     }
   });
   
-  // // Import image
-  // var $inputImage = $('#inputImage');
-  // var URL = window.URL || window.webkitURL;
-  // var blobURL;
+  // Import image
+  var $inputImage = $('#inputImage');
+  var URL = window.URL || window.webkitURL;
+  var blobURL;
 
-  // if (URL) {
-    // $inputImage.change(function () {
-      // var files = this.files;
-      // var file;
+  if (URL) {
+    $inputImage.change(function () {
+      var files = this.files;
+      var file;
 
-      // if (!$image.data('cropper')) {
-        // return;
-      // }
+      if (!$image.data('cropper')) {
+        return;
+      }
 
-      // if (files && files.length) {
-        // file = files[0];
+      if (files && files.length) {
+        file = files[0];
 
-        // if (/^image\/\w+$/.test(file.type)) {
-          // blobURL = URL.createObjectURL(file);
-          // $image.one('built.cropper', function () {
+        if (/^image\/\w+$/.test(file.type)) {
+          blobURL = URL.createObjectURL(file);
+          $image.one('built.cropper', function () {
 
-            // // Revoke when load complete
-            // URL.revokeObjectURL(blobURL);
-          // }).cropper('reset').cropper('replace', blobURL);
-          // $inputImage.val('');
-        // } else {
-          // window.alert('Please choose an image file.');
-        // }
-      // }
-    // });
-  // } else {
-    // $inputImage.prop('disabled', true).parent().addClass('disabled');
-  // }
+            // Revoke when load complete
+            URL.revokeObjectURL(blobURL);
+          }).cropper('reset').cropper('replace', blobURL);
+          $inputImage.val('');
+        } else {
+          window.alert('Please choose an image file.');
+        }
+      }
+    });
+  } else {
+    $inputImage.prop('disabled', true).parent().addClass('disabled');
+  }
   
   
   
