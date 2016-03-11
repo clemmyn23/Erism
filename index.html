@@ -12,7 +12,9 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link  href="cropper/dist/cropper.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cropper/dist/cropper.min.css">
+  <link rel="stylesheet" href="css/erism.css">
+  
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -26,11 +28,6 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <style>
-    @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-    #header {margin-top:40px; margin-bottom:40px}
-    header {font-size:48px; font-family: 'Source Sans Pro', sans-serif;}
-  </style>
   <div class="container">
     <div id="header">
       <header>Erism [ALPHA]- BnS profile pictures cropper</header>
@@ -38,21 +35,16 @@
   </div>
   
   
-  <style>
-    img {max-width:100%}
-    #workspace {margin-left:10px; margin-right:10px; margin-top:auto;
-                max-width:800px; display:inline-block}
-    .img-preview {margin-left:10px; margin-right:10px; margin-top:auto;
-                  background-color:#eeeeee; text-align:center; overflow:hidden;
-                  width:250px; height:394px; display:inline-block}
-    .result {margin:20px}
-  </style>
-  
   <div class="container">
     <div class="row">
-      <div id="workspace"><img id="image" src="sensei_orig.jpg"></div>
-      <div class="img-preview"></div>
-      
+      <div class="col-md-9">
+        <div class="workspace">
+          <img id="image" src="sensei_orig.jpg">
+        </div>
+      </div>
+        <div class="col-md-3">
+          <div class="img-preview"></div>
+        </div>
     </div>
     
     <div class="row">
@@ -155,7 +147,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="cropper/dist/cropper.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/erism.js"></script>
   
 </body>
 </html>

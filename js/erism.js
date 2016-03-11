@@ -1,3 +1,10 @@
+/*!
+ * HEAVILY BASED OFF Cropper v2.3.0 GH-page.
+ * https://github.com/fengyuanchen/cropper
+ * Released under the MIT license
+ *
+ */
+
 $(function() {
   'use strict';
   
