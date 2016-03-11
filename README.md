@@ -1,6 +1,8 @@
 # Erism
 Erism - Profile pic cropper for BnS game
 
-Based on cropper by fengyuanchen https://github.com/fengyuanchen/cropper
+http://clemm.me/erism
 
+Based on Cropper by fengyuanchen https://github.com/fengyuanchen/cropper
 
+Released under MIT licence 
