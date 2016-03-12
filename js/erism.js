@@ -147,7 +147,7 @@ $(function() {
             $('#getCroppedCanvasModal').modal().find('.modal-body').html(result);
 
             if (!$download.hasClass('disabled')) {
-              $download.attr('href', result.toDataURL('image/jpg'));
+              $download.attr('href', result.toDataURL('image/jpeg', 0.9));
             }
           }
 
