@@ -146,9 +146,9 @@ $(function() {
             // Bootstrap's Modal
             $('#getCroppedCanvasModal').modal().find('.modal-body').html(result);
 
-            // if (!$download.hasClass('disabled')) {
+            if (!$download.hasClass('disabled')) {
               $download.attr('href', result.toDataURL('image/jpg'));
-            // }
+            }
           }
 
           break;
