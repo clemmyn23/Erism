@@ -30,7 +30,7 @@
 
   <div class="container">
     <div id="header">
-      <header>Erism [ALPHA]- BnS profile pictures cropper</header>
+      <h1>Erism [ALPHA]</h1><h2>BnS profile pictures cropper</h2>
     </div>
   </div>
   
@@ -51,12 +51,12 @@
       <div class="docs-buttons">
         <div class="btn-group">
           <button type="button" class="btn btn-primary" data-method="zoom" data-option="0.1" title="Zoom In">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;zoom&quot;, 0.1)">
+            <span class="docs-tooltip" data-toggle="tooltip" title="Zoom In">
               <span class="fa fa-search-plus"></span>
             </span>
           </button>
           <button type="button" class="btn btn-primary" data-method="zoom" data-option="-0.1" title="Zoom Out">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;zoom&quot;, -0.1)">
+            <span class="docs-tooltip" data-toggle="tooltip" title="Zoom Out">
               <span class="fa fa-search-minus"></span>
             </span>
           </button>
@@ -64,12 +64,12 @@
         
         <div class="btn-group">
           <button type="button" class="btn btn-primary" data-method="rotate" data-option="-45" title="Rotate Left">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;rotate&quot;, -45)">
+            <span class="docs-tooltip" data-toggle="tooltip" title="Rotate Left">
               <span class="fa fa-rotate-left"></span>
             </span>
           </button>
           <button type="button" class="btn btn-primary" data-method="rotate" data-option="45" title="Rotate Right">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;rotate&quot;, 45)">
+            <span class="docs-tooltip" data-toggle="tooltip" title="Rotate Right">
               <span class="fa fa-rotate-right"></span>
             </span>
           </button>
@@ -77,35 +77,33 @@
         
         <div class="btn-group">
           <button type="button" class="btn btn-primary" data-method="reset" title="Reset">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;reset&quot;)">
-              <span class="fa fa-refresh"></span>
-            </span>
+            <span class="fa fa-refresh"></span> Reset
           </button>
           <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
             <input type="file" class="sr-only" id="inputImage" name="file" accept="image/*">
-            <span class="docs-tooltip" data-toggle="tooltip" title="Import image with Blob URLs">
-              <span class="fa fa-upload"></span>
-            </span>
+              <span class="fa fa-upload"></span> Import Image
           </label>
         </div>
         
         
         <div class="btn-group btn-group-crop">
+          <button type="button" class="btn btn-primary" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 413, &quot;height&quot;: 678 }">
+
+              Get Cropped Canvas (413&times;678)
+
+          </button>
+        
           <button type="button" class="btn btn-primary" data-method="getCroppedCanvas">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;)">
-              Get Cropped Canvas
+            <span class="docs-tooltip" data-toggle="tooltip" title="FINISH">
+              Get Cropped Canvas (Original size)
             </span>
           </button>
           
-          <button type="button" class="btn btn-primary" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 413, &quot;height&quot;: 678 }">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;, { width: 413, height: 678 })">
-              413&times;678
-            </span>
-          </button>
+          
           <button type="button" class="btn btn-primary" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 250, &quot;height&quot;: 394 }">
-            <span class="docs-tooltip" data-toggle="tooltip" title="$().cropper(&quot;getCroppedCanvas&quot;, { width: 250, height: 394 })">
-              250&times;394
-            </span>
+
+              Get Cropped Canvas (250&times;394)
+
           </button>
         </div>
         
@@ -120,7 +118,7 @@
               <div class="modal-body"></div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.png">Download</a>
+                <a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.png">Download JPG</a>
               </div>
             </div>
           </div>
