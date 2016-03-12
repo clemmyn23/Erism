@@ -5,10 +5,7 @@ http://clemm.me/erism
 http://clemmyn23.github.io/Erism/
 
 TODO:
-- Theme the site and make everything look pretty
-- Export to jpg not png
-- Get rid of all the scary technical tooltips/descriptions
-- Better/clearer/idiot-proof icons
+- Customise the theme and make things even prettier!
 - Instruction page and disclaimers 
 
 Based on Cropper by fengyuanchen https://github.com/fengyuanchen/cropper  
